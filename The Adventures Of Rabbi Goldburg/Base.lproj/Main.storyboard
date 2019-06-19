@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="The_Adventures_Of_Rabbi_Goldburg" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Eor-02-lJz">
+                                <rect key="frame" x="0.0" y="44" width="375" height="503"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. conscient to factor tum poen legum odioque civiuda.conscient to factor tum poen legum odioque civiuda. conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4de-Dn-b7F">
+                                <rect key="frame" x="0.0" y="507" width="375" height="305"/>
+                                <subviews>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tmn-dW-stZ" userLabel="Button1">
+                                        <rect key="frame" x="0.0" y="210" width="375" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.099152008" blue="0.23822915280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="choice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZxI-pM-wln"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9fk-6S-9BX" userLabel="Button3">
+                                        <rect key="frame" x="0.0" y="137" width="375" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.099152008" blue="0.23822915280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="choice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vh6-7X-Bcw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="redraw" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08V-7E-2md" userLabel="Button2">
+                                        <rect key="frame" x="0.0" y="63" width="375" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.099152008" blue="0.23822915280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="button1">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="choice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MoU-bo-m2K"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="08V-7E-2md" firstAttribute="centerX" secondItem="4de-Dn-b7F" secondAttribute="centerX" id="07S-9t-m73"/>
+                                    <constraint firstItem="9fk-6S-9BX" firstAttribute="leading" secondItem="4de-Dn-b7F" secondAttribute="leading" id="DdN-8a-xmw"/>
+                                    <constraint firstAttribute="trailing" secondItem="08V-7E-2md" secondAttribute="trailing" id="HQ4-SM-GUu"/>
+                                    <constraint firstItem="9fk-6S-9BX" firstAttribute="centerX" secondItem="4de-Dn-b7F" secondAttribute="centerX" id="L9E-rr-ilM"/>
+                                    <constraint firstItem="08V-7E-2md" firstAttribute="leading" secondItem="4de-Dn-b7F" secondAttribute="leading" id="PzI-ci-9j1"/>
+                                    <constraint firstAttribute="trailing" secondItem="Tmn-dW-stZ" secondAttribute="trailing" id="Sdb-Pg-S3k"/>
+                                    <constraint firstItem="Tmn-dW-stZ" firstAttribute="centerX" secondItem="4de-Dn-b7F" secondAttribute="centerX" id="cX4-zi-3gr"/>
+                                    <constraint firstAttribute="trailing" secondItem="9fk-6S-9BX" secondAttribute="trailing" id="hua-X8-rpf"/>
+                                    <constraint firstItem="Tmn-dW-stZ" firstAttribute="leading" secondItem="4de-Dn-b7F" secondAttribute="leading" id="k1J-NQ-UPm"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Eor-02-lJz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="1ao-dg-aIC"/>
+                            <constraint firstAttribute="bottom" secondItem="4de-Dn-b7F" secondAttribute="bottom" id="CRp-6D-4n5"/>
+                            <constraint firstItem="4de-Dn-b7F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EIl-VM-rVY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eor-02-lJz" secondAttribute="trailing" id="Qio-7g-P5l"/>
+                            <constraint firstItem="4de-Dn-b7F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VKU-Vn-Fsy"/>
+                            <constraint firstItem="Eor-02-lJz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZLM-RA-Qir"/>
+                            <constraint firstAttribute="bottom" secondItem="4de-Dn-b7F" secondAttribute="bottom" id="Zin-db-3rh"/>
+                            <constraint firstAttribute="bottom" secondItem="4de-Dn-b7F" secondAttribute="bottom" id="d2y-MZ-AOi"/>
+                            <constraint firstItem="4de-Dn-b7F" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="k5k-0N-U1y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="button1" destination="08V-7E-2md" id="zBD-4d-gpV"/>
+                        <outlet property="button2" destination="9fk-6S-9BX" id="RgZ-Mt-R4S"/>
+                        <outlet property="button3" destination="Tmn-dW-stZ" id="j9g-0f-khe"/>
+                        <outlet property="story" destination="Eor-02-lJz" id="X64-06-M1J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="34.399999999999999" y="17.733990147783253"/>
+        </scene>
+    </scenes>
+</document>
