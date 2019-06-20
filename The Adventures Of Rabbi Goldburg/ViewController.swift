@@ -337,9 +337,20 @@ class ViewController: UIViewController {
                 index = 27
             }
             else{
-                story.text = "Oops you couldn’t make it in time and you fell into the fire you hear Zanis laughing and the world is doomed. Press Reset to try again"
-                button1.setTitle("Reset", for: .normal)
-                index = 1
+                if(rabbi.getLives() <= 1)
+                {
+                    showNext()
+                    rabbi.setLives(lives: rabbi.getLives() - 1)
+                    story.text = "Oops you couldn’t make it in time and you fell into the fire you hear Zanis laughing and the world is doomed. you lose one life now you have \(rabbi.getLives() - 1) lives left, you will have to go underground now"
+                    button2.setTitle("Don't take a shortcut", for: .normal)
+                    button1.setTitle("Take a shortcut", for: .normal)
+                    index = 27
+                }
+                else{
+                    story.text = "Oops you couldn’t make it in time and you fell into the fire you hear Zanis laughing and the world is doomed. Press Reset to try again"
+                    button1.setTitle("Reset", for: .normal)
+                    index = 1
+                }
             }
         }
         else if (index == 26 && sender.tag == 2)
@@ -356,22 +367,40 @@ class ViewController: UIViewController {
                 index = 27
             }
             else{
-                story.text = "Oops you couldn’t make it in time and you were engulfed in the flames you hear Zanis laughing and the world is doomed. Press Reset to try again"
-                button1.setTitle("Reset", for: .normal)
-                button2.isHidden = true
-                button3.isHidden = true
-                index = 1
+                if(rabbi.getLives() <= 1)
+                {
+                    showNext()
+                    rabbi.setLives(lives: rabbi.getLives() - 1)
+                    story.text = "Oops you couldn’t make it in time and you fell into the fire you hear Zanis laughing and the world is doomed. you lose one life now you have \(rabbi.getLives() - 1) lives left, you will have to go underground now"
+                    button2.setTitle("Don't take a shortcut", for: .normal)
+                    button1.setTitle("Take a shortcut", for: .normal)
+                    index = 27
+                }
+                else{
+                    story.text = "Oops you couldn’t make it in time and you fell into the fire you hear Zanis laughing and the world is doomed. Press Reset to try again"
+                    button1.setTitle("Reset", for: .normal)
+                    index = 1
+                }
             }
             
         }
         else if (index == 26 && sender.tag == 3)
         {
             //Rabbi Panics
-            story.text = "Oops you couldn’t make it in time and you fell into the fire you hear Zanis laughing and the world is doomed. Press Reset to try again"
-            button1.setTitle("Reset", for: .normal)
-            button2.isHidden = true
-            button3.isHidden = true
-            index = 1
+            if(rabbi.getLives() <= 1)
+            {
+                showNext()
+                rabbi.setLives(lives: rabbi.getLives() - 1)
+                story.text = "Oops you couldn’t make it in time and you fell into the fire you hear Zanis laughing and the world is doomed. you lose one life now you have \(rabbi.getLives() - 1) lives left, you will have to go underground now"
+                button2.setTitle("Don't take a shortcut", for: .normal)
+                button1.setTitle("Take a shortcut", for: .normal)
+                index = 27
+            }
+            else{
+                story.text = "Oops you couldn’t make it in time and you fell into the fire you hear Zanis laughing and the world is doomed. Press Reset to try again"
+                button1.setTitle("Reset", for: .normal)
+                index = 1
+            }
         }
         else if(index == 27 && sender.tag == 1 || (index == 103))
         {
@@ -434,6 +463,7 @@ class ViewController: UIViewController {
             rabbi.setSpeed(spd: 100000)
             rabbi.setPower(pow: rabbi.getPower()+15)
             pathIndex = 7
+            button2.isHidden = true
             index = 35
         }
         else if (index == 9 && sender.tag == 3 || (index == 22 && sender.tag == 3))
@@ -447,7 +477,7 @@ class ViewController: UIViewController {
             story.text = "You arrive in New York City, what once was a modern palace of art, culture, and society is left in ruins flooded with negativity and you rabbi Goldberg are the only light of hope. The streets are empty you feel a cool wind on the back of your neck and you hear a faint scream in the distance."
             index = 37
         }
-        else if (index == 37 && sender.tag == 1)
+        else if (index == 37 && sender.tag == 1 || (index == 150 && sender.tag == 1))
         {
             //Times Square
             timeSquare = true
@@ -495,10 +525,21 @@ class ViewController: UIViewController {
             let randomNumber = Int.random(in: 1...5)
             if(randomNumber >= 3)
             {
-                story.text = "The ramen restaurant is a trap and the ramen is poisoned you are now under mind control and will obey Zanis’s every command. Press Reset in order to try again."
                 showNext()
-                button1.setTitle("Reset", for: .normal)
-                index = 1
+                if(rabbi.getLives() <= 1)
+                {
+                    story.text = "The ramen restaurant is a trap and the ramen is poisoned you are now under mind control and will obey Zanis’s every command. Press Reset in order to try again."
+                    button1.setTitle("Reset", for: .normal)
+                    index = 1
+                }
+                else
+                {
+                    rabbi.setLives(lives: rabbi.getLives() - 1)
+                    story.text = "The ramen restaurant is a trap and the ramen is poisoned you are now under mind control and will obey Zanis’s every command. you now how \(rabbi.getLives()) lives left press next to go to the park"
+                    showNext()
+                    index = 42
+                }
+                
             }
             else{
                 story.text = "The Ramen is so good and you feel energized and ready for battle somebody tells you that people need help at the park, you head to the park after your meal."
@@ -637,8 +678,6 @@ class ViewController: UIViewController {
                 randomEnemy(level: 3)
             }
             
-            //Set Buttons to Pick move
-            setButtons(s1: "Attack", s2: "Dodge", s3: "Attack + Chance to Dodge")
             
             story.text = "you have stumbled upon a \(enemy1.getType()) type servent with \(enemy1.getPower()) power, \(enemy1.getHealth()) health, and \(enemy1.getSpeed()) speed get ready to fight"
             
@@ -646,9 +685,12 @@ class ViewController: UIViewController {
             if(rabbi.getSpeed() > enemy1.getSpeed())
             {
                 index = 14
+                //Set Buttons to Pick move
+                setButtons(s1: "Attack", s2: "Dodge", s3: "Attack + Chance to Dodge")
             }
             else{
                 index = 15
+                showNext()
             }
         }
             
@@ -779,7 +821,7 @@ class ViewController: UIViewController {
                 button1.setTitle("Go to Times Square", for: .normal)
             }
             button2.setTitle("Airport", for: .normal)
-            
+            index = 150
         }
         else if (index == 99)
         {
@@ -823,7 +865,7 @@ class ViewController: UIViewController {
                 index = 106
             }
         }
-        else if(index == 19 && sender.tag == 2 || (index == 20 && sender.tag == 2) || (index == 21 && sender.tag == 1) || (index == 40 && sender.tag == 2) || (index == 100 && sender.tag == 2))
+        else if(index == 19 && sender.tag == 2 || (index == 20 && sender.tag == 2) || (index == 21 && sender.tag == 1) || (index == 40 && sender.tag == 2) || (index == 100 && sender.tag == 2) || (index == 150 && sender.tag == 2))
         {
             story.text = "You Have arrived at the airport where will you go next"
             button1.isHidden = true
@@ -844,6 +886,11 @@ class ViewController: UIViewController {
             {
                 button3.isHidden = false
                 button3.setTitle("New York City", for: .normal)
+            }
+            if(placesPicked[0] == "Pentagon" && placesPicked[1] == "White House" && placesPicked[2] == "NYC")
+            {
+                button2.isHidden = false
+                button2.setTitle("Go to the White House", for: .normal)
             }
             index = 22
         }
