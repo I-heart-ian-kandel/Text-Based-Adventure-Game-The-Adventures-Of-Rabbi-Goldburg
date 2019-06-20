@@ -337,16 +337,18 @@ class ViewController: UIViewController {
                 index = 27
             }
             else{
-                if(rabbi.getLives() <= 1)
+                if(rabbi.getLives() >= 0)
                 {
                     showNext()
                     rabbi.setLives(lives: rabbi.getLives() - 1)
                     story.text = "Oops you couldn’t make it in time and you fell into the fire you hear Zanis laughing and the world is doomed. you lose one life now you have \(rabbi.getLives() - 1) lives left, you will have to go underground now"
+                    button2.isHidden = false
                     button2.setTitle("Don't take a shortcut", for: .normal)
                     button1.setTitle("Take a shortcut", for: .normal)
                     index = 27
                 }
                 else{
+                    showNext()
                     story.text = "Oops you couldn’t make it in time and you fell into the fire you hear Zanis laughing and the world is doomed. Press Reset to try again"
                     button1.setTitle("Reset", for: .normal)
                     index = 1
@@ -362,21 +364,24 @@ class ViewController: UIViewController {
             {
                 story.text = "You jump straight into the fire you feel yourself protected by a higher power you are ready to take on what is next! you have to head underground now"
                 button3.isHidden = true
+                button2.isHidden = false
                 button2.setTitle("Don't take a shortcut", for: .normal)
                 button1.setTitle("Take a shortcut", for: .normal)
                 index = 27
             }
             else{
-                if(rabbi.getLives() <= 1)
+                if(rabbi.getLives() >= 0)
                 {
                     showNext()
                     rabbi.setLives(lives: rabbi.getLives() - 1)
                     story.text = "Oops you couldn’t make it in time and you fell into the fire you hear Zanis laughing and the world is doomed. you lose one life now you have \(rabbi.getLives() - 1) lives left, you will have to go underground now"
+                    button2.isHidden = false
                     button2.setTitle("Don't take a shortcut", for: .normal)
                     button1.setTitle("Take a shortcut", for: .normal)
                     index = 27
                 }
                 else{
+                    showNext()
                     story.text = "Oops you couldn’t make it in time and you fell into the fire you hear Zanis laughing and the world is doomed. Press Reset to try again"
                     button1.setTitle("Reset", for: .normal)
                     index = 1
@@ -387,16 +392,18 @@ class ViewController: UIViewController {
         else if (index == 26 && sender.tag == 3)
         {
             //Rabbi Panics
-            if(rabbi.getLives() <= 1)
+            if(rabbi.getLives() >= 0)
             {
                 showNext()
                 rabbi.setLives(lives: rabbi.getLives() - 1)
                 story.text = "Oops you couldn’t make it in time and you fell into the fire you hear Zanis laughing and the world is doomed. you lose one life now you have \(rabbi.getLives() - 1) lives left, you will have to go underground now"
+                button2.isHidden = false
                 button2.setTitle("Don't take a shortcut", for: .normal)
                 button1.setTitle("Take a shortcut", for: .normal)
                 index = 27
             }
             else{
+                showNext()
                 story.text = "Oops you couldn’t make it in time and you fell into the fire you hear Zanis laughing and the world is doomed. Press Reset to try again"
                 button1.setTitle("Reset", for: .normal)
                 index = 1
@@ -526,7 +533,7 @@ class ViewController: UIViewController {
             if(randomNumber >= 3)
             {
                 showNext()
-                if(rabbi.getLives() <= 1)
+                if(rabbi.getLives() <= 0)
                 {
                     story.text = "The ramen restaurant is a trap and the ramen is poisoned you are now under mind control and will obey Zanis’s every command. Press Reset in order to try again."
                     button1.setTitle("Reset", for: .normal)
