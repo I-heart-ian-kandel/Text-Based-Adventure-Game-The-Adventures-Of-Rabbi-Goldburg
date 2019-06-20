@@ -70,7 +70,7 @@ class Player: Entity
     {
         //40% chance to sucessfully dodge and attack
         let randomNum = Int.random(in: 1...10)
-        if (randomNum <= 4)
+        if (randomNum <= 5)
         {
             enemy.setHealth(hea: attackCheck(enemy: enemy, a: 0))
             health += 5
@@ -104,7 +104,7 @@ class Player: Entity
         //level up once after 3 enemies fought
         // level up again after 2 more a total of 5
         // level up again after 2 more a total of 7
-        if(playerExp == 30 || playerExp == 70 || playerExp == 130)
+        if(playerExp == 20 || playerExp == 60 || playerExp == 90)
         {
             levelUp()
             level += 1
@@ -121,5 +121,9 @@ class Player: Entity
         health += 20
         speed += 12
         power += 10
+    }
+    func resetExp()
+    {
+        playerExp = 0
     }
 }

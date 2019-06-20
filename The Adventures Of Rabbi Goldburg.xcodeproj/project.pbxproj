@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7030DCA522BAC74C00180E2F /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7030DCA422BAC74C00180E2F /* RoundButton.swift */; };
 		7044867422B325D300BFEB69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7044867322B325D300BFEB69 /* AppDelegate.swift */; };
 		7044867622B325D300BFEB69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7044867522B325D300BFEB69 /* ViewController.swift */; };
 		7044867922B325D300BFEB69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7044867722B325D300BFEB69 /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7030DCA422BAC74C00180E2F /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RoundButton.swift; path = "../../../Downloads/Auto-Layout-Practice-iOS12-master/Auto Layout Practice/RoundButton.swift"; sourceTree = "<group>"; };
 		7044867022B325D300BFEB69 /* The Adventures Of Rabbi Goldburg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Adventures Of Rabbi Goldburg.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7044867322B325D300BFEB69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7044867522B325D300BFEB69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			children = (
 				7044867322B325D300BFEB69 /* AppDelegate.swift */,
 				7044867522B325D300BFEB69 /* ViewController.swift */,
+				7030DCA422BAC74C00180E2F /* RoundButton.swift */,
 				7044868522B3278000BFEB69 /* Entity.swift */,
 				7044868922B71A2E00BFEB69 /* Player.swift */,
 				7044868B22B71E6600BFEB69 /* Enemy.swift */,
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7030DCA522BAC74C00180E2F /* RoundButton.swift in Sources */,
 				7044868A22B71A2E00BFEB69 /* Player.swift in Sources */,
 				7044868C22B71E6600BFEB69 /* Enemy.swift in Sources */,
 				7044867622B325D300BFEB69 /* ViewController.swift in Sources */,
